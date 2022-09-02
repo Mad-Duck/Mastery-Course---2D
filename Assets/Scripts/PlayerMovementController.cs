@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
+    [SerializeField]
+    private float moveSpeed = 2;
+
     // Update is called once per frame
     private void Update()
     {
@@ -10,6 +13,6 @@ public class PlayerMovementController : MonoBehaviour
 
         Vector3 movement = new Vector3(horizontal, vertical);
 
-        Debug.Log(movement);
+        transform.position += movement * Time.deltaTime * moveSpeed;
     }
 }
