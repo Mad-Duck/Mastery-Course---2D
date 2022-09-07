@@ -15,7 +15,7 @@ public class PlayerMovementController : MonoBehaviour
 
         transform.position += movement * Time.deltaTime * moveSpeed;
 
-        if (Input.getButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1"))
         {
             var rigidbody2D = GetComponent<Rigidbody2D>();
             rigidbody2D.AddForce(Vector2.up * jumpForce);
